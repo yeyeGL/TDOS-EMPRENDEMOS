@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*Estilos del login en tailwind que se pueden reciclar*/
+
+.inputs-login {
+  @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:animate-shake animate-once animate-duration-[3000ms] animate-delay-[2000ms];
+}
+
+.form-login {
+  @apply bg-secondary bg-opacity-80 p-8 rounded-lg shadow-md w-full max-w-md animate-jump animate-once animate-duration-[3000ms] animate-delay-[2000ms];
+}
+
+.button-login {
+  @apply w-full p-3 bg-green-600 text-white rounded-md shadow-xl hover:shadow-green-300 duration-3000 hover:bg-green-800 font-semibold;
+}

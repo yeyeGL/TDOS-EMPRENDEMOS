@@ -1,9 +1,11 @@
-const App =()=>{
-  return(
-    <div>
-      <h1>Aqui empieza todo el proyecto de la U otra vez jiji</h1>
-    </div>
-  )
-}
+import Rutas from "./routes/Rutas";
 
-export default App
+const App = () => {
+  return (
+    <div>
+      <Rutas />
+    </div>
+  );
+};
+
+export default App;
