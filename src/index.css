@@ -5,7 +5,7 @@
 /*Estilos del login en tailwind que se pueden reciclar*/
 
 .inputs-login {
-  @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:animate-shake animate-once animate-duration-[3000ms] animate-delay-[2000ms];
+  @apply w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600 focus:animate-shake animate-once animate-duration-[3000ms] animate-delay-[2000ms];
 }
 
 .form-login {
@@ -13,5 +13,9 @@
 }
 
 .button-login {
-  @apply w-full p-3 bg-green-600 text-white rounded-md shadow-xl hover:shadow-green-300 duration-3000 hover:bg-green-800 font-semibold;
+  @apply w-full p-3 bg-green-600 text-white rounded-xl shadow-xl hover:shadow-green-300 duration-3000 hover:bg-green-800 font-bold;
+}
+
+.text-login-left {
+    @apply animate-fade-right animate-once animate-ease-linear
 }
