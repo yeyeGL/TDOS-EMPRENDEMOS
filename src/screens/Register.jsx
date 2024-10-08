@@ -23,12 +23,12 @@ const Register = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/register", data);
+      const res = await axios.post("http://localhost:3000/api/register", data);
       console.log(res.data);
       reset();
       redirect("/");
     } catch (error) {
-      console.log("Error", error);
+      console.log("Error", error.response.data);
     }
   });
 
@@ -118,7 +118,7 @@ const Register = () => {
               to="/"
               className="text-green-800 text-base hover:text-green-700 transition-colors duration-300 ease-in-out relative group font-bold"
             >
-              Crear una cuenta
+             Inicia Sesion
               <span className="absolute left-0 bottom-0 w-0.5 h-0.5 bg-green-900 transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </Link>
           </p>

@@ -18,7 +18,7 @@ const Login = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/login", data);
+      const res = await axios.post("http://localhost:3000/api/login", data);
       console.log(res.data);
       reset();
       redirect("/home");
