@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export const SearchIcon = ({
     size = 24,
     strokeWidth = 1.5,

@@ -69,32 +69,30 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
+    <div className="min-h-screen bg-gray-50 p-8">
       <ProfileHeader />
       <div className="flex justify-start">
+        <div className="mb-4">
+          <CreateProductForm handleCreateProduct={handleCreateProduct} />
+        </div>
 
-      <div className="mb-4">
-        <CreateProductForm handleCreateProduct={handleCreateProduct} />
+        <div className="mb-4">
+          {editingProduct ? (
+            <EditProductForm
+              editingProduct={editingProduct}
+              handleUpdate={handleUpdate}
+            />
+          ) : (
+            <FilterProductForm
+              handleFilter={handleFilter}
+              filter={filter}
+              setFilter={setFilter}
+            />
+          )}
+        </div>
       </div>
 
-    
-      <div className="mb-4">
-        {editingProduct ? (
-          <EditProductForm
-            editingProduct={editingProduct}
-            handleUpdate={handleUpdate}
-          />
-        ) : (
-          <FilterProductForm
-            handleFilter={handleFilter}
-            filter={filter}
-            setFilter={setFilter}
-          />
-        )}
-      </div>
-      </div>
-
-      <h2 className="text-2xl font-semibold text-green-800 mb-4">Productos</h2>
+      <h2 className="text-4xl font-semibold  mb-4">Productos</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {(filteredProducts.length > 0 ? filteredProducts : products).map(
           (product) => (

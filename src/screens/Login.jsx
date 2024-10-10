@@ -38,13 +38,13 @@ const Login = () => {
       <div className="hidden md:flex flex-1 rounded-lg bg-gradient-to-tl from-secondary via-green-400 to-green-800 from-30% via-50% to-90% items-center justify-center p-10 animate-jump animate-once animate-duration-[3000ms] animate-delay-[2000ms]">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold mb-4 text-white text-login-left animate-duration-[4000ms] animate-delay-[4000ms] ">
-            No se que poner despues lo coloco
+           Bienvenidos a la pagina oficial de TdoS Emprendemos
           </h1>
           <p className="text-xl mb-4 text-green-900 font-semibold text-login-left animate-duration-[5000ms] animate-delay-[5000ms] ">
-            No se que poner despues lo coloco
+            Aca fomentamos los emprendimientos de los estudiantes
           </p>
           <p className="text-lg text-green-800 font-bold text-login-left animate-duration-[6000ms] animate-delay-[6000ms] ">
-            No se que poner despues lo coloco
+            Ingresa y mira los productos de los estudiantes o publica tus productos
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import Modal from './Modal';
-import { Plus } from 'lucide-react'; 
+import { useState } from "react";
+import Modal from "./Modal";
+import { Plus } from "lucide-react";
 
 const CreateProductForm = ({ handleCreateProduct }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,13 +15,14 @@ const CreateProductForm = ({ handleCreateProduct }) => {
   };
 
   return (
-    <div className=' justify-center'>
-        <button
-            onClick={openModal}
-            className="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600 transition duration-300 mx-6 flex items-center cell:text-sm  md:text-lg lg:text-xl ">
-            <Plus className="h-5 w-5 mr-2" /> 
-            Crear Producto
-        </button>
+    <div className=" justify-center">
+      <button
+        onClick={openModal}
+        className="bg-white text-green-500 px-6 py-3 rounded-2xl border border-green-500 transition  mx-6 flex items-center cell:text-sm  md:text-lg lg:text-xl hover:bg-green-600 hover:text-white duration-2000 shadow-xl hover:shadow-green-400"
+      >
+        <Plus className="h-5 w-5 mr-2" />
+        Crear Producto
+      </button>
 
       <Modal isOpen={isModalOpen} onClose={closeModal} title="Crear Nuevo Producto">
         <form onSubmit={handleCreateProduct}>

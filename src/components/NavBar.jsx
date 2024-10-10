@@ -1,8 +1,7 @@
-import {Navbar,NavbarBrand,NavbarContent,NavbarItem,Link,Input,DropdownItem,DropdownTrigger,Dropdown,
+import {Navbar,NavbarBrand,NavbarContent,NavbarItem,Link,DropdownItem,DropdownTrigger,Dropdown,
 DropdownMenu,Avatar} from "@nextui-org/react";
 
-import { AcmeLogo } from "../assets/AcmeLogo.jsx";
-import { SearchIcon } from "../assets/SearchIcon.jsx";
+import logo from "../assets/image.png"
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
@@ -16,32 +15,18 @@ const NavBar = () => {
     <Navbar className="bg-green-700 shadow-2xl mt-4 mx-auto max-w-[95%] rounded-md">
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">
-          <AcmeLogo />
+        <img src={logo} alt="Logo" className=" w-8 h-auto mr-2" />
           <p className="hidden sm:block font-bold text-inherit text-white">TdoS Emprendemos</p>
         </NavbarBrand>
 
         <NavbarContent className="hidden sm:flex gap-3">
-          <NavbarItem><Link className="font-semibold text-white" href="#">Productos</Link></NavbarItem>
-          <NavbarItem><Link className="font-semibold text-white" href="#">Categorias</Link></NavbarItem>
+         <NavbarItem><Link className="font-semibold text-white" href="/profile">Perfil</Link></NavbarItem>
           <NavbarItem><Link className="font-semibold text-white" href="#">Noticias</Link></NavbarItem>
         </NavbarContent>
 
       </NavbarContent>
 
       <NavbarContent as="div" className="items-center" justify="end">
-        <Input
-          classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
-            mainWrapper: "h-full",
-            input: "text-small",
-            inputWrapper:
-              "h-full font-normal text-default-500 bg-white ",
-          }}
-          placeholder="Buscar ..."
-          size="sm"
-          startContent={<SearchIcon size={18} />}
-          type="search"
-        />
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar

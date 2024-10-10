@@ -2,14 +2,14 @@ import { User, MessageCircle } from 'lucide-react'
 
 const ProfileHeader = () => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 flex items-center justify-between mb-8 max-w-[85%] mx-auto">
+    <div className="bg-green-700 shadow-lg rounded-lg p-4 flex items-center justify-between mb-8 max-w-[95%] mx-auto">
       {/* Lado izquierdo de la seccion imagen de perfil y informacion del usuario */}
       <div className="flex items-center space-x-6">
         <div className="bg-green-200 rounded-full p-4 shadow-md">
           <User className="w-12 h-12 text-green-600" />
         </div>
         <div>
-          <h2 className="text-3xl font-bold text-green-700 leading-tight">Lea Gay</h2>
+          <h2 className="text-3xl font-bold text-white leading-tight">Lea Gay</h2>
           <p className="text-md text-green-500">Lea_gay@ejemplo.com</p>
         </div>
       </div>
