@@ -1,10 +1,13 @@
 import NavBar from "../components/NavBar";
 
 const Home = () => {
+ 
+ 
+
   return (
     <div>
-      <NavBar/>
-      <p></p>
+      <NavBar />
+   
     </div>
   );
 };

@@ -30,7 +30,12 @@ export default {
         tetradecanary: "#457B9D",
         pentadecanary: "#FF6347",
         hexadecanary: "#212121",
-      }
+      },
+      screens: {
+        'cell': '500px', 
+        'celu': '450px', 
+        
+      },
     },
   },
   darkMode: "class",
