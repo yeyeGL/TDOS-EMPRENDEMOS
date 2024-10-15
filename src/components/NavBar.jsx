@@ -44,7 +44,7 @@ const NavBar = () => {
               <p className="font-semibold">Nombre de la cuenta</p>
               <p className="font-semibold">Correo de la cuentaa</p>
             </DropdownItem>
-            <DropdownItem onClick={() => handleNavigate('/perfil')}>Mi perfil</DropdownItem>
+            <DropdownItem onClick={() => handleNavigate('/profile')}>Mi perfil</DropdownItem>
             <DropdownItem onClick={() => handleNavigate('/confi')}>Configuraciones</DropdownItem>
             <DropdownItem onClick={() => handleNavigate('/noticias')}>Noticias</DropdownItem>
             <DropdownItem onClick={() => handleNavigate('/comentarios')}>Comentarios</DropdownItem>

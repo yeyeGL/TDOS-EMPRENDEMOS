@@ -23,7 +23,7 @@ const Login = () => {
       reset();
       redirect("/home");
     } catch (error) {
-      console.log("Error", error);
+      console.log("Error", error.response.data);
     }
   });
 
