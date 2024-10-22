@@ -1,6 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { useState } from "react";
 
@@ -14,30 +13,23 @@ const Login = () => {
     reset,
   } = useForm();
 
-
-
   const [showPassword, setShowPassword] = useState(false);
 
-  const onSubmit = handleSubmit(async (data) => {
-    try {
-      const res = await axios.post("http://localhost:3000/api/login", data);
-      console.log(res.data);
-      reset()
-      redirect("/home");
-    } catch (error) {
-      console.log("Error", error.response.data);
-    }
+  const onSubmit = handleSubmit((data) => {
+    console.log("Form submitted with data:", data);
+    reset();
+    redirect("/home");
   });
 
   const errorMessages = Object.values(errors).map((error) => error.message);
 
   return (
-    <section className="flex h-screen"  style={{ backgroundImage: `url(/img/fondov4.png)` }} >
-      {/* Lado izquierdo */}
+    <section className="flex h-screen" style={{ backgroundImage: `url(/img/fondov4.png)` }}>
+      {/* Left Side */}
       <div className="hidden md:flex flex-1 rounded-lg bg-gradient-to-tl from-secondary via-green-400 to-green-800 from-30% via-50% to-90% items-center justify-center p-10 animate-jump animate-once animate-duration-[3000ms] animate-delay-[2000ms]">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold mb-4 text-white text-login-left animate-duration-[4000ms] animate-delay-[4000ms] ">
-           Bienvenidos a la pagina oficial de TdoS Emprendemos
+            Bienvenidos a la pagina oficial de TdoS Emprendemos
           </h1>
           <p className="text-xl mb-4 text-green-900 font-semibold text-login-left animate-duration-[5000ms] animate-delay-[5000ms] ">
             Aca fomentamos los emprendimientos de los estudiantes
@@ -48,13 +40,10 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Lado derecho con la imagen de fondo y el formulario centrado */}
-      <div
-        className="flex flex-1 items-center justify-center bg-cover bg-left-center relative"
-        style={{ backgroundImage: `url(/img/fondov1.png)` }}
-      >
+      {/* Right Side with Background Image and Centered Form */}
+      <div className="flex flex-1 items-center justify-center bg-cover bg-left-center relative" style={{ backgroundImage: `url(/img/fondov1.png)` }}>
         <div className="flex flex-col items-center justify-center w-full max-w-md">
-          {/* Título que solo aparece en dispositivos móviles */}
+          {/* Title for Mobile Devices Only */}
           <h1 className="text-3xl font-extrabold mb-6 text-center text-green-700 block md:hidden form-login">
             Bienvenidos
             <p>TDOS-EMPRENDEMOS</p>
@@ -84,7 +73,7 @@ const Login = () => {
                   required: "Contraseña requerida",
                   minLength: {
                     value: 6,
-                    message:"La contraseña debe contener al menos 6 caracteres",
+                    message: "La contraseña debe contener al menos 6 caracteres",
                   },
                 })}
                 placeholder="Contraseña"
@@ -107,7 +96,7 @@ const Login = () => {
               </div>
             )}
 
-          <button type="submit" className="button-login">Iniciar Sesion</button>
+            <button type="submit" className="button-login">Iniciar Sesion</button>
 
             <div className="mt-4 text-center">
               <h1 className="font-semibold">¿No tienes una cuenta?</h1>

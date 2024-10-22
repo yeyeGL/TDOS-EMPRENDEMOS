@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import {
@@ -21,15 +20,10 @@ const Register = () => {
     reset,
   } = useForm();
 
-  const onSubmit = handleSubmit(async (data) => {
-    try {
-      const res = await axios.post("http://localhost:3000/api/register", data);
-      console.log(res.data);
-      reset();
-      redirect("/");
-    } catch (error) {
-      console.log("Error", error);
-    }
+  const onSubmit = handleSubmit((data) => {
+    console.log("Registration Data:", data);
+    reset();
+    redirect("/"); 
   });
 
   const errorMessages = Object.values(errors).map((error) => error.message);
@@ -40,7 +34,7 @@ const Register = () => {
       style={{ backgroundImage: `url(/img/a1.png)` }}
     >
       <div className="flex flex-col md:flex-row w-full max-w-4xl space-y-6 md:space-y-0">
-        {/* Conatiner de registro */}
+        {/* Container de registro */}
         <div className="form-container">
           <h1 className="title">Registro</h1>
           <form onSubmit={onSubmit} className="flex flex-col space-y-4">
@@ -84,8 +78,7 @@ const Register = () => {
                   required: "Contraseña requerida",
                   minLength: {
                     value: 6,
-                    message:
-                      "La contraseña debe contener al menos 6 caracteres",
+                    message: "La contraseña debe contener al menos 6 caracteres",
                   },
                 })}
                 placeholder="Contraseña"
@@ -113,12 +106,12 @@ const Register = () => {
             <button className="register-button">Registrar</button>
           </form>
           <p className="link">
-            ¿Ya tienes una cuenta?{"   "}
+            ¿Ya tienes una cuenta?{" "}
             <Link
               to="/"
               className="text-green-800 text-base hover:text-green-700 transition-colors duration-300 ease-in-out relative group font-bold"
             >
-             Inicia Sesion
+              Inicia Sesion
               <span className="absolute left-0 bottom-0 w-0.5 h-0.5 bg-green-900 transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </Link>
           </p>
