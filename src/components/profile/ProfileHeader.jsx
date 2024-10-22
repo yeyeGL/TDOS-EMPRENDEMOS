@@ -9,8 +9,8 @@ const ProfileHeader = () => {
           <User className="w-12 h-12 text-green-600" />
         </div>
         <div>
-          <h2 className="text-3xl font-bold text-white leading-tight">Lea Gay</h2>
-          <p className="text-md text-green-500">Lea_gay@ejemplo.com</p>
+          <h2 className="text-3xl font-bold text-white leading-tight">evidencia</h2>
+          <p className="text-md text-green-500">evidencia@gmail.com</p>
         </div>
       </div>
 

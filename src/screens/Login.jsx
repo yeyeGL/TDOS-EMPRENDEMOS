@@ -14,13 +14,15 @@ const Login = () => {
     reset,
   } = useForm();
 
+
+
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = handleSubmit(async (data) => {
     try {
       const res = await axios.post("http://localhost:3000/api/login", data);
       console.log(res.data);
-      reset();
+      reset()
       redirect("/home");
     } catch (error) {
       console.log("Error", error.response.data);
@@ -30,10 +32,7 @@ const Login = () => {
   const errorMessages = Object.values(errors).map((error) => error.message);
 
   return (
-    <section
-      className="flex h-screen"
-      style={{ backgroundImage: `url(/img/fondov4.png)` }}
-    >
+    <section className="flex h-screen"  style={{ backgroundImage: `url(/img/fondov4.png)` }} >
       {/* Lado izquierdo */}
       <div className="hidden md:flex flex-1 rounded-lg bg-gradient-to-tl from-secondary via-green-400 to-green-800 from-30% via-50% to-90% items-center justify-center p-10 animate-jump animate-once animate-duration-[3000ms] animate-delay-[2000ms]">
         <div className="text-center">

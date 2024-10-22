@@ -28,7 +28,7 @@ const Register = () => {
       reset();
       redirect("/");
     } catch (error) {
-      console.log("Error", error.response.data);
+      console.log("Error", error);
     }
   });
 

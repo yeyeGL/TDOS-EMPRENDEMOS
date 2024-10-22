@@ -16,12 +16,12 @@ const NavBar = () => {
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">
         <img src={logo} alt="Logo" className=" w-8 h-auto mr-2" />
-          <p className="hidden sm:block font-bold text-inherit text-white">TdoS Emprendemos</p>
+          <p className=" sm:block font-bold text-inherit text-white">TdoS Emprendemos</p>
         </NavbarBrand>
 
         <NavbarContent className="hidden sm:flex gap-3">
          <NavbarItem><Link className="font-semibold text-white" href="/profile">Perfil</Link></NavbarItem>
-          <NavbarItem><Link className="font-semibold text-white" href="#">Noticias</Link></NavbarItem>
+          <NavbarItem><Link className="font-semibold text-white" href="/notices">Noticias</Link></NavbarItem>
         </NavbarContent>
 
       </NavbarContent>
@@ -45,9 +45,7 @@ const NavBar = () => {
               <p className="font-semibold">Correo de la cuentaa</p>
             </DropdownItem>
             <DropdownItem onClick={() => handleNavigate('/profile')}>Mi perfil</DropdownItem>
-            <DropdownItem onClick={() => handleNavigate('/confi')}>Configuraciones</DropdownItem>
-            <DropdownItem onClick={() => handleNavigate('/noticias')}>Noticias</DropdownItem>
-            <DropdownItem onClick={() => handleNavigate('/comentarios')}>Comentarios</DropdownItem>
+            <DropdownItem onClick={() => handleNavigate('/notices')}>Noticias</DropdownItem>
             <DropdownItem onClick={() => handleNavigate('/')}color="danger">Log Out</DropdownItem>
           </DropdownMenu>
         </Dropdown>

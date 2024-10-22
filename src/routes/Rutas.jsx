@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import Register from "../screens/Register";
 import Profile from "../screens/Profile";
 import Chat from "../screens/Chat";
+import Notices from "../screens/Notices";
 
 
 
@@ -17,6 +18,7 @@ const Rutas =()=>{
                 <Route path="/register" element={<Register />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/chat" element={<Chat/>} />
+                <Route path="/notices" element={<Notices/>} />
             </Routes>
         </BrowserRouter>
     )
