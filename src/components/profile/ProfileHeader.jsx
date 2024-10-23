@@ -2,7 +2,7 @@ import { User, MessageCircle } from 'lucide-react'
 
 const ProfileHeader = () => {
   return (
-    <div className="bg-green-700 shadow-lg rounded-lg p-4 flex items-center justify-between mb-8 max-w-[95%] mx-auto">
+    <div className="bg-green-700 shadow-lg rounded-lg p-4 flex items-center justify-between mb-8 max-w-[95%] mx-auto animate-fade-down animate-duration-[1000ms] animate-delay-[1000ms]">
       {/* Lado izquierdo de la seccion imagen de perfil y informacion del usuario */}
       <div className="flex items-center space-x-6">
         <div className="bg-green-200 rounded-full p-4 shadow-md">

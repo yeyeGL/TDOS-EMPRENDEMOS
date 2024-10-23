@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar className="bg-green-700 shadow-2xl mt-4 mx-auto max-w-[95%] rounded-md">
+    <Navbar className="bg-green-700 shadow-2xl mt-4 mx-auto max-w-[95%] rounded-md animate-fade-down animate-duration-[1000ms] animate-delay-[1000ms]">
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">
         <img src={logo} alt="Logo" className=" w-8 h-auto mr-2" />
@@ -20,8 +20,8 @@ const NavBar = () => {
         </NavbarBrand>
 
         <NavbarContent className="hidden sm:flex gap-3">
-         <NavbarItem><Link className="font-semibold text-white" href="/profile">Perfil</Link></NavbarItem>
-          <NavbarItem><Link className="font-semibold text-white" href="/notices">Noticias</Link></NavbarItem>
+         <NavbarItem><Link className="font-semibold text-white" onClick={() => handleNavigate('/profile')}>Perfil</Link></NavbarItem>
+          <NavbarItem><Link className="font-semibold text-white" onClick={() => handleNavigate('/notices')}>Noticias</Link></NavbarItem>
         </NavbarContent>
 
       </NavbarContent>

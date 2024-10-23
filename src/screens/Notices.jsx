@@ -5,14 +5,14 @@ const Notices = () => {
     <div className="min-h-screen bg-white">
       <header className="bg-green-700 text-white py-4">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold">Noticias Tecnologico De Antioquia (TDEA)</h1>
+          <h1 className="text-3xl font-bold animate-fade-right animate-duration-[2000ms] animate-delay-2000ms]">Noticias Tecnologico De Antioquia (TDEA)</h1>
         </div>
       </header>
       <main className="container mx-auto px-4 py-8">
-        <h2 className="text-4xl font-bold text-green-700 mb-8">
+        <h2 className="text-4xl font-bold text-green-700 mb-8 animate-fade-right animate-duration-[2000ms] animate-delay-[2000ms]">
           Noticias Universitarias
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-up animate-duration-[2000ms] animate-delay-[2000ms]">
           {noticias.map((item) => (
             <div
               key={item.id}

@@ -92,7 +92,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <h2 className="text-4xl font-semibold  mb-4">Productos</h2>
+      <h2 className="text-4xl font-semibold  mb-4 animate-fade-down animate-duration-[3000ms] animate-delay-[3000ms]">Productos</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {(filteredProducts.length > 0 ? filteredProducts : products).map(
           (product) => (

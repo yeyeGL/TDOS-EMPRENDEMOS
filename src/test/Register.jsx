@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { render, screen, fireEvent, waitFor } from "@testing-library/react"; 
 import Register from "./Register"; 
 import axios from "axios"; 

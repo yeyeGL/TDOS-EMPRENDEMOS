@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
     return (
-      <div className="mb-8">
+      <div className="mb-8 animate-fade-down animate-duration-[3000ms] animate-delay-[3000ms]">
         <input
           type="text"
           placeholder="Buscar productos, servicios o comidas..."

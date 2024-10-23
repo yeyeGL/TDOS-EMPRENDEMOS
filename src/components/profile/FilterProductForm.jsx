@@ -17,11 +17,7 @@ const FilterProductForm = ({ handleFilter, filter, setFilter }) => {
   return (
     <div className=' justify-center'>
       
-      <button
-      onClick={openModal}
-      className="bg-white text-green-500 px-6 py-3 rounded-2xl border border-green-500 transition  mx-6 flex items-center cell:text-sm  md:text-lg lg:text-xl hover:bg-green-600 hover:text-white duration-2000 shadow-xl hover:shadow-green-400"
-    >
-      <Filter className="h-5 w-5 mr-2" /> 
+      <button onClick={openModal} className="buttons-profile" ><Filter className="h-5 w-5 mr-2" /> 
       Filtrar Productos
     </button>
 

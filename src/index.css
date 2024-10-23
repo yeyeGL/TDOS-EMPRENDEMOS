@@ -64,3 +64,15 @@
 .why-text {
   @apply text-gray-800 mb-4;
 }
+
+
+/*Estilos del hpme en tailwind que se pueden reciclar*/
+
+.animated-down{
+  @apply animate-fade-down animate-duration-[4000ms] animate-delay-[4000ms]
+
+}
+
+.buttons-profile{
+  @apply bg-white text-green-500 px-6 py-3 rounded-2xl border border-green-500 transition  mx-6 flex items-center cell:text-sm  md:text-lg lg:text-xl hover:bg-green-600 hover:text-white duration-2000 shadow-xl hover:shadow-green-400 animate-flip-down animate-duration-[2000ms] animate-delay-[2000ms]
+}
